@@ -14,7 +14,7 @@
 */
 
 html {
-    background: #c2c2c2;
+    background: #5f9fff;
 }
 
 body {
@@ -23,7 +23,7 @@ body {
     margin: auto;
 }
 
-body::after {
+article::after {
     clear: both;
     content: "";
     display: table;
@@ -35,20 +35,36 @@ header img {
     margin: auto;
 }
 
-header nav.horizontal {
+nav#horizontal {
     width: 100%;
 }
 
-
-header nav.horizontal li {
+nav#horizontal ul {
     display: block;
+}
+
+nav#horizontal ul li {
+    background-color: white;
+    display: block;
+    text-align: center;
     float: left;
     width: 20%;
+    line-height: 2.5em;
+}
+
+nav#horizontal ul li a:link,
+nav#horizontal ul li a:visited {
+    color: #003ee9;
+}
+
+nav#horizontal ul li a:hover,
+nav#horizontal ul li a:active {
+    color: white;
+    background-color: #003ee9;
 }
 
 figure {
-    border-style: solid;
-    border-width: 5px;
+    border: 5px solid;
     margin: 2px 2px;
     width: 33%;
     display: block;
@@ -60,24 +76,33 @@ figure img {
     width: 100%;
 }
 
+figure:hover,
+figure:active {
+    border: 5px solid #0033c0;
+}
+
+figcaption {
+    text-align: center;
+    background: white;
+}
+
 section.sectleft {
     float: left;
-    margin-left: 10%;
-    margin-right: 4%;
-    margin-top: 50px;
+    margin: 2.5em 4% 0 10%;
     width: 50%;
+    color: black;
+    text-shadow: #76adff 0 0 10px;
 }
 
 aside {
     float: left;
-    margin-right: 0%;
-    margin-top: 50px;
+    margin: 2em 0 2em 0;
     padding: 20px;
     width: 26%;
-    background: radial-gradient(white, #a06ee7, #5a0aca);
-    border: 4px solid #350080;
+    background: radial-gradient(white, #7da6ff, #0f5bff);
+    border: 4px solid #154cc2;
     border-radius: 30px;
-    box-shadow: #35008070 0px 0px 20px 10px;
+    box-shadow: #000d8070 0px 0px 20px 10px;
 }
 
 dd,
@@ -88,4 +113,18 @@ ul {
 
 aside h2 {
     font-size: 1.5em;
+    padding-bottom: 0.5em;
+}
+
+footer {
+    background-color: black;
+    display: block;
+    padding: 25px;
+}
+
+footer nav a {
+    color: white;
+    float: left;
+    width: 25%;
+    text-align: center;
 }
