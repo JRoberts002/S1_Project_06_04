@@ -12,80 +12,107 @@
    Filename: br_styles.css
 
 */
-
+/* This sets the background color. */
 html {
     background: #5f9fff;
 }
 
+/* This sets the width and background of the body. */
 body {
     background: url(br_paper.png) repeat;
     width: 85%;
     margin: auto;
 }
 
+/* This makes the background expand over the main content. */
 article::after {
     clear: both;
     content: "";
     display: table;
 }
 
+/* This makes the heading image fill the entire width. */
 header img {
     clear: left;
     display: block;
     margin: auto;
 }
 
-nav#horizontal {
+/* This formats the nav bar at the top. */
+nav#horizontal ul {
+    display: block;
+    text-align: center;
     width: 100%;
 }
 
-nav#horizontal ul {
-    display: block;
-}
-
-nav#horizontal ul li {
+/* This sets the size and color of the individual list items in the nav. */
+nav#horizontal ul li a {
     background-color: white;
-    display: block;
-    text-align: center;
     float: left;
     width: 20%;
     line-height: 2.5em;
 }
 
+/* This sets the font color of the list items. */
 nav#horizontal ul li a:link,
 nav#horizontal ul li a:visited {
     color: #003ee9;
 }
 
+/* This changes the background and text colors of elements being hovered over or clicked on. */
 nav#horizontal ul li a:hover,
 nav#horizontal ul li a:active {
     color: white;
     background-color: #003ee9;
 }
 
+/* This formats the figure elements and adds a border. */
 figure {
     border: 5px solid;
-    margin: 2px 2px;
+    margin: 0.15% 0.15%;
     width: 33%;
     display: block;
     float: left;
 }
 
+/* This positions the images and resizes them to fill the figure elements. */
 figure img {
     display: block;
     width: 100%;
 }
 
+/* This increases the contrast and size of images that are hovered over or clicked on. (similar to how eyes work). */
+figure img:hover,
+figure img:active {
+    filter: contrast(1.5);
+    transform: scale(1.02);
+}
+
+/* This changes the border color of figure elements that are overed over or clicked on. */
 figure:hover,
 figure:active {
     border: 5px solid #0033c0;
 }
 
+/* This changes the color and removes the underline from figure links. */
+figure a {
+    text-decoration: none;
+    color: black;
+}
+
+/* This changes the color of figcaption text when the image is hovered over. */
+figure a:hover,
+figure a:active {
+    color: #0033c0;
+}
+
+/* This centers figcaption text and gives it a background. */
 figcaption {
     text-align: center;
     background: white;
 }
 
+/* This sets the format, color, and text shadow of the text in the section element. */
 section.sectleft {
     float: left;
     margin: 2.5em 4% 0 10%;
@@ -94,6 +121,7 @@ section.sectleft {
     text-shadow: #76adff 0 0 10px;
 }
 
+/* This sets the position, size, border, text shadow, gradient, and background of the aside element. */
 aside {
     float: left;
     margin: 2em 0 2em 0;
@@ -105,26 +133,35 @@ aside {
     box-shadow: #000d8070 0px 0px 20px 10px;
 }
 
+/* This sets the font size of the main text in the aside element. */
 dd,
 dt,
 ul {
     font-size: 1em;
 }
 
+/* This sets the font size of the header nested in the aside element. */
 aside h2 {
     font-size: 1.5em;
     padding-bottom: 0.5em;
 }
 
+/* This sets the color and padding of the footer. */
 footer {
-    background-color: black;
-    display: block;
-    padding: 25px;
+    padding: 1.5em 0 3em 0;
+    background: linear-gradient(black, #424e92);
 }
 
+/* This sets the font color, format, size, and text alignment of the links in the footer */
 footer nav a {
     color: white;
     float: left;
     width: 25%;
     text-align: center;
+}
+
+/* This underlines links in the footer that are hovered over or click on. */
+footer nav a:hover,
+footer nav a:active {
+    text-decoration: underline;
 }
